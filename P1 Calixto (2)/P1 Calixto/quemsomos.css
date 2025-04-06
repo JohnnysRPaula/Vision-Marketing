@@ -1,0 +1,87 @@
+.intro {
+    padding: 40px 0;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.intro h1 {
+    font-size: 2.8em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.mvv-section {
+    padding: 40px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.mvv-section:last-child {
+    border-bottom: none;
+}
+
+.mvv-section h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.mvv-section p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.valores-list {
+    list-style: none;
+    padding: 0;
+}
+
+.valores-list li {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.valores-list li i {
+    margin-right: 10px;
+    color: #007bff;
+    font-size: 1.2em;
+}
+
+.institutional-video {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.institutional-video h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.video-container {
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+}

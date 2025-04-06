@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vision Marketing - Menu</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .radio-player {
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .radio-player audio {
+            width: 100%;
+            max-width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="menu.html">
+                    <img src="C:\Users\nahme\OneDrive\Documentos\P1 Calixto\Logotipo Vision Marketing.jpg" alt="Logotipo Vision Marketing">
+                </a>
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="quemsomos.html">Quem somos</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Bem-vindo à Vision Marketing</h1>
+                <p>Sua parceira estratégica para o sucesso no mundo digital.</p>
+                <a href="servicos.html" class="button">Nossos Serviços</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="radio-player">
+        <audio controls>
+            <source src="C:\Users\nahme\OneDrive\Documentos\P1 Calixto\musica suave.mp3" type="audio/mp3">
+        </audio>
+        <p><small>Dê o play e curta a vibe. Utilize os controles acima para ativar ou desativar o som.</small></p>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Vision Marketing. Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:info@visionmarketing.com.br"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

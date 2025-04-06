@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formulário de Contato</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .form-container {
+      width: 400px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    #mensagem {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      background-color: #f9f9f9;
+    }
+    .button-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .return-button {
+      background-color: #6c757d;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      text-decoration: none;
+    }
+    .return-button:hover {
+      background-color: #5a6268;
+    }
+    footer {
+      background-color: #f8f9fa;
+      padding: 20px;
+      text-align: center;
+      margin-top: auto;
+    }
+    footer a {
+      margin: 0 15px;
+      color: #495057;
+      text-decoration: none;
+    }
+    footer a:hover {
+      color: #007bff;
+    }
+    .icon {
+      vertical-align: middle;
+      margin-right: 5px;
+      font-size: 1.2em;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Entre em Contato</h2>
+    <form id="meuFormulario">
+      <div class="form-group">
+        <label for="nome">Digite seu nome:</label>
+        <input type="text" id="nome" name="nome" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Digite seu e-mail:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="telefone">Digite seu telefone para contato:</label>
+        <input type="tel" id="telefone" name="telefone">
+      </div>
+
+      <div class="form-group">
+        <label for="segmento">Em qual segmento você atua?</label>
+        <select id="segmento" name="segmento">
+          <option value="">Selecione um segmento</option>
+          <option value="varejo">Varejo</option>
+          <option value="servicos">Serviços</option>
+          <option value="industria">Indústria</option>
+          <option value="tecnologia">Tecnologia</option>
+          <option value="educacao">Educação</option>
+          <option value="saude">Saúde</option>
+          <option value="outros">Outros</option>
+        </select>
+      </div>
+
+      <button type="button" onclick="enviarFormulario()">Enviar</button>
+    </form>
+
+    <div id="mensagem" style="display: none;"></div>
+  </div>
+
+  <div class="button-container">
+    <a href="menu.html" class="return-button">Retornar ao Menu</a>
+  </div>
+
+  <footer>
+    <a href="mailto:info@visionmarketing.com.br">
+      <i class="fa fa-envelope icon"></i> info@visionmarketing.com.br
+    </a>
+    <a href="https://www.instagram.com/visionmarketingoficial" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-instagram icon"></i> @visionmarketingoficial
+    </a>
+    <a href="https://www.facebook.com/visionmarketingpagina" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-facebook icon"></i> /visionmarketingpagina
+    </a>
+  </footer>
+
+  <script>
+    function enviarFormulario() {
+      const nome = document.getElementById('nome').value;
+      const email = document.getElementById('email').value;
+      const telefone = document.getElementById('telefone').value;
+      const segmento = document.getElementById('segmento').value;
+      const mensagemDiv = document.getElementById('mensagem');
+
+      if (nome && email) {
+        const dadosFormulario = {
+          nome: nome,
+          email: email,
+          telefone: telefone,
+          segmento: segmento
+        };
+
+        mensagemDiv.textContent = 'Formulário enviado com sucesso!\n\n' +
+                                  'Nome: ' + dadosFormulario.nome + '\n' +
+                                  'Email: ' + dadosFormulario.email + '\n' +
+                                  'Telefone: ' + dadosFormulario.telefone + '\n' +
+                                  'Segmento: ' + dadosFormulario.segmento;
+        mensagemDiv.style.display = 'block';
+
+        document.getElementById('meuFormulario').reset();
+      } else {
+        mensagemDiv.textContent = 'Por favor, preencha os campos obrigatórios (Nome e E-mail).';
+        mensagemDiv.style.display = 'block';
+      }
+    }
+  </script>
+
+</body>
+</html>
